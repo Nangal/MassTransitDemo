@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Automatonymous">
+      <HintPath>..\packages\Automatonymous.0.8.0\lib\net40\Automatonymous.dll</HintPath>
+    </Reference>
+    <Reference Include="Automatonymous.MassTransitIntegration">
+      <HintPath>..\packages\Automatonymous.MassTransit.0.8.0\lib\net40\Automatonymous.MassTransitIntegration.dll</HintPath>
+    </Reference>
     <Reference Include="Magnum">
       <HintPath>..\packages\Magnum.2.1.0\lib\NET40\Magnum.dll</HintPath>
     </Reference>
@@ -41,9 +47,14 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="Taskell">
+      <HintPath>..\packages\Taskell.0.1.2\lib\net40\Taskell.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressValidationConsumer.cs" />
+    <Compile Include="NewAddressState.cs" />
+    <Compile Include="NewAddressStateMachine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveMemberAddressConsumer.cs" />
     <Compile Include="ValidateAddress.cs" />

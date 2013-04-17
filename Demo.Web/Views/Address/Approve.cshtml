@@ -1,0 +1,44 @@
+﻿@model Demo.Web.Models.ApproveAddress
+
+@{
+    ViewBag.Title = "Approve";
+}
+
+<h2>Approve</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ApproveAddress</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MemberId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MemberId)
+            @Html.ValidationMessageFor(model => model.MemberId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Approver)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Approver)
+            @Html.ValidationMessageFor(model => model.Approver)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

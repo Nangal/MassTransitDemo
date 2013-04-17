@@ -1,4 +1,4 @@
-﻿namespace Demo.MemberService
+namespace Demo.Core
 {
     using System;
     using Contracts;

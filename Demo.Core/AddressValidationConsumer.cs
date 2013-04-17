@@ -1,4 +1,4 @@
-﻿namespace Demo.MemberService
+namespace Demo.Core
 {
     using System;
     using Contracts;
@@ -6,7 +6,7 @@
     using MassTransit.Scheduling;
 
 
-    class AddressValidationConsumer :
+    public class AddressValidationConsumer :
         Consumes<MemberAddressAdded>.Context,
         Consumes<ValidateAddress>.Context
     {
@@ -40,13 +40,5 @@
             public DateTime Timestamp { get; private set; }
             public string MemberId { get; private set; }
         }
-    }
-
-
-    public interface ValidateAddress
-    {
-        Guid CommandId { get; }
-        DateTime Timestamp { get; }
-        string MemberId { get; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace Demo.MemberService
 {
+    using Core;
     using MassTransit;
     using Topshelf;
 

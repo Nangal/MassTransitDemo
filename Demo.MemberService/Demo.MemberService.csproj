@@ -67,8 +67,6 @@
     <Content Include="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="AddressValidationConsumer.cs" />
-    <Compile Include="SaveMemberAddressConsumer.cs" />
     <Compile Include="MemberService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +79,10 @@
     <ProjectReference Include="..\Demo.Contracts\Demo.Contracts.csproj">
       <Project>{1ca5b426-b31f-4445-9de4-0018f6f34304}</Project>
       <Name>Demo.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
+      <Project>{f2600b28-5fc7-40d6-8aaa-c878ba3504c8}</Project>
+      <Name>Demo.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
